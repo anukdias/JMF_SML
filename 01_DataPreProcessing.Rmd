@@ -7,11 +7,15 @@ output: html_document
 
 This is the data preparation file for the JMF special issue paper on supervsed ML.
 
+```{r setup, include=FALSE}
+# Set working directory for entire doc
+setwd("/Users/anuk/Desktop/ISRDI/AddHealth_Public")
+```
 
 ```{r}
 library(foreign)
 library(psych)
-setwd("~/Desktop/paper/SunProjects/Add Health")
+setwd("/Users/anuk/Desktop/ISRDI/AddHealth_Public")
 #reading in Wave 1 In-Home Interview Data
 load("Wave1InHome.rda")
 wave1<-da21600.0001
@@ -671,6 +675,7 @@ dat1$FatherDisable<-ddisable
 
 Smoker(s) in household
 ```{r}
+
 HHsmoke<-as.numeric(substr(wave1$PA63, start = 2, stop = 2))
 dat1$SmokerHousehold<-HHsmoke
 ```
@@ -797,6 +802,7 @@ dat1$BornToAdolescentParent<-PAteen
 
 Load wave 4 data
 ```{r}
+setwd("/Users/anuk/Desktop/ISRDI/AddHealth_Public")
 load("Wave4InHome.rda")
 wave4<-da21600.0022
 dat4<-wave4[c("AID")]
@@ -951,6 +957,7 @@ imputed_dat14_re[factorcols] <- sapply(dat14_re[factorcols], as.numeric)
 
 Sample weights
 ```{r}
+setwd("/Users/anuk/Desktop/ISRDI/AddHealth_Public")
 load("Wave4Weights.rda")
 Wave4Weights<-da21600.0031
 Wave4Weights_c<-Wave4Weights[c('AID', 'GSWGT4_2')]
