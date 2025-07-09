@@ -1,5 +1,11 @@
 # Supervised Machine Learning for Exploratory Analysis in Family Research
 
+Conda environment setup:
+
+conda create --name AddHealth --file spec-file.txt
+
+
+
 Documentation of programming scripts for the empirical example on adolescents' family experiences as predictors of young adult educational attainment with machine learning, based on Add Health data. <br>
 Paper <i>in press</i> at <i>Journal of Marriage and Family</i>. <br>
 Author: Xiaoran Sun, at University of Minnesota, Twin Cities
